@@ -59,6 +59,12 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf("%d", &carta2.pontosTuristicos);
 
+    // CÁLCULOS DAS NOVAS MÉTRICAS (ADICIONADOS)
+    float densidade1 = carta1.populacao / carta1.area;
+    float pibPerCapita1 = carta1.pib / carta1.populacao;
+    
+    float densidade2 = carta2.populacao / carta2.area;
+    float pibPerCapita2 = carta2.pib / carta2.populacao;
 
     // Exibir as cartas cadastradas
     printf("\n=== CARTA 1 ===\n");
@@ -69,6 +75,8 @@ int main() {
     printf("Area: %.2f km2\n", carta1.area);
     printf("PIB: %.2f\n", carta1.pib);
     printf("Pontos turisticos: %d\n", carta1.pontosTuristicos);
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade1); // ADICIONADO
+    printf("PIB per Capita: %.2f\n", pibPerCapita1);             // ADICIONADO
 
     printf("\n=== CARTA 2 ===\n");
     printf("Estado: %c\n", carta2.estado);
@@ -78,6 +86,8 @@ int main() {
     printf("Area: %.2f km2\n", carta2.area);
     printf("PIB: %.2f\n", carta2.pib);
     printf("Pontos turisticos: %d\n", carta2.pontosTuristicos);
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade2); // ADICIONADO
+    printf("PIB per Capita: %.2f\n", pibPerCapita2);             // ADICIONADO
 
     return 0;
 }
